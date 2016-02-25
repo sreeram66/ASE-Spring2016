@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            color: #444;
+            -webkit-font-smoothing: antialiased;
+            background-size: 1300px 800px;
+            background-repeat: no-repeat;
+        }</style>
+
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+<head>
+    <meta name="google-signin-client_id" content="57817686780-p4kpruekli3akkkbh9rgn9notnovljhq.apps.googleusercontent.com">
+</head>
+<body background="new.jpg">
+
+<br>
+<br>
+<br>
+<h2 align="center" style="color:White" >Welcome to DirectionalMaps<!DOCTYPE html"></h2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 align="center" style="color:White" >Please Log In using your Google account<!DOCTYPE html"></h2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div align="center" id="signin"></div>
+<script>
+    function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        window.location='Home.html'
+    }
+    function onFailure(error) {
+        console.log(error);
+    }
+    function renderButton() {
+        gapi.signin2.render('signin', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+
+            'onsuccess': onSuccess,
+            'onfailure': onFailure
+        });
+    }
+
+</script>
+
+
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</body>
+</html>
