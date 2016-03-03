@@ -23,7 +23,7 @@
             <p align="center"><input type="submit" value="Area" ></p>
             <p align="center"><input type="submit" value="Perimeter"></p>
             <br>
-            <p align="center">Perimeter of square is 20</p>
+           
         </form>
         <div id="results"></div>
     </div>
