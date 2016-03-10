@@ -1,0 +1,79 @@
+<html ng-app="update">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <title>Updation</title>
+    <style>
+        #htmlbody{
+            position: absolute;
+            top: 10px;
+            left: 320px;
+            right: -40px;
+            bottom: -20px;
+            width: auto;
+            height: auto;
+            background-image: url(img1.jpg);
+            background-size: cover;
+            -webkit-filter: blur(0px);
+            z-index: 0;
+        }
+        #tablebody
+        {
+            position:absolute;
+            top:40%;
+            left: 20%;
+        }
+        #tablestyle
+        {
+            height: 40%;
+        }
+    </style>
+</head>
+<body ng-controller="UpdateController" id="htmlbody">
+<div id="tablestyle" id="tablestyle">
+    <table id="tablebody">
+        <caption><h3>Update Password</h3></caption>
+        <tr>
+            <td>
+                <div style="color: black">
+                    Existing Password:
+                </div>
+
+            </td>
+            <td>
+                <input type="text" id="EPassword" ng-model="epasst"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="color: black">
+                    New Password:
+                </div>
+            </td>
+            <td>
+                <input type="text" id="NPassword" ng-model="npass"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="color: black">
+                    Confirm Password:
+                </div>
+            </td>
+            <td>
+                <input type="text" id="CPassword" ng-model="cpass"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <button id="Update" name="update" ng-click="UpdatePassword(first,last,email,phone,pass)">UpdateProfile</button>
+            </td>
+        </tr>
+    </table>
+    <div style="position: absolute; right: 2%"><button class="btn btn-lg btn-primary btn-block" onclick="window.location='DeleteAccount.html'" type="submit">Delete Account</button></div>
+</div>
+</body>
+</html>
