@@ -1,0 +1,55 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Battery\"><param name=\"ios-package\" value=\"CDVBattery\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ImagePicker\"><param name=\"ios-package\" value=\"SOSPicker\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.ionicframework.myapp468702"
+        },
+        "cordova-plugin-image-picker": {
+            "PACKAGE_NAME": "com.ionicframework.myapp468702"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-battery-status/www/battery.js",
+            "id": "cordova-plugin-battery-status.battery",
+            "pluginId": "cordova-plugin-battery-status",
+            "clobbers": [
+                "navigator.battery"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-image-picker/www/imagepicker.js",
+            "id": "cordova-plugin-image-picker.ImagePicker",
+            "pluginId": "cordova-plugin-image-picker",
+            "clobbers": [
+                "plugins.imagePicker"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-battery-status": "1.1.1",
+        "cordova-plugin-image-picker": "1.0.8"
+    }
+}
